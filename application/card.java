@@ -1,37 +1,36 @@
 package application;
 
-abstract class card extends deck 
+abstract class Card extends Deck 
 {
-	final int DEFAULT_MAX_CARD_NUM = 10;
-	final int DEFAULT_TOTAL_CARD = 20;
+//	final int DEFAULT_MAX_CARD_NUM = 10;
+//	final int DEFAULT_TOTAL_CARD = 20;
+	final String DEFAULT_NAME = "<no card name>";
 	
-	String[] warriorDeck;
-	String[] magicianDeck;
+	static enum cardType {SPAWN, INSTANT}
+	String name = DEFAULT_NAME;
+	String imageStr = "";
 	
-	int totalCards;
-	int maxNumCards;
+	/**
+	 * idk the correct string format for this yet
+	 * @return the correct image string used to update the GUI images
+	 */
+	public String getImage() {
+		return String.format("/%s", imageStr);
+	}
 	
-	String[] attackCards;
-	String[] defenseCards;
-	String[] magicCards;
-	String[] healCards;
+//	String[] warriorDeck;
+//	String[] magicianDeck;
+//	
+//	int totalCards;
+//	int maxNumCards;
+//	
+//	String[] attackCards;
+//	String[] defenseCards;
+//	String[] magicCards;
+//	String[] healCards;
 	
 	
 	
 	
 
-	public void suffleDeck()
-	{
-		
-	}
-	
-	public void drawCardTop()
-	{
-		
-	}
-	
-	public void drawCardBottom()
-	{
-		
-	}
 }
